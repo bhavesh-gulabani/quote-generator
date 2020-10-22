@@ -39,10 +39,9 @@ async function getQuote() {
         } else {
             quoteText.classList.remove('long-quote');
         }
-
+        
         quoteText.innerText = data.quoteText;
         removeLoadingSpinner();
-
     } catch(error) {
         getQuote();
     }
@@ -53,7 +52,6 @@ function tweetQuote() {
     const quote = quoteText.innerText;
     const author = authorText.innerText;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
-
     window.open(twitterUrl, '_blank');
 }
 
