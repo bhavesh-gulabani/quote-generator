@@ -44,10 +44,9 @@ function newQuote() {
 // Get quote from API
 async function getQuote() {
     showLoadingSpinnner();
-    const proxyUrl = 'https://warm-headland-10529.herokuapp.com/';
     const apiUrl = 'https://type.fit/api/quotes';
     try {
-        const response = await fetch(proxyUrl + apiUrl);
+        const response = await fetch(apiUrl);
         apiQuotes = await response.json();  
         newQuote();
     } catch(error) {
